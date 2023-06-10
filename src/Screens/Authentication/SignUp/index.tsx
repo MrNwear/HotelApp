@@ -2,14 +2,18 @@ import * as React from 'react';
 import { Text, View, StyleSheet, KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
 import { Button, Input } from '../../../Components';
 import styles from './style';
+import { useNavigation } from '@react-navigation/native';
 
 interface SignUpScreenProps {}
 
 const SignUpScreen = (props: SignUpScreenProps) => {
   const [passwordShown, setPasswordShown]=React.useState(false);
+  const navigation:any=useNavigation();
+  
   const onShowPasswordPress=()=>{
       setPasswordShown(!passwordShown);
   }
+
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -35,7 +39,7 @@ const SignUpScreen = (props: SignUpScreenProps) => {
                 //   error={errors.new_password}
                 />
 
-    <Button title='Sign Up' style={{marginTop:20}}/>
+    <Button title='Sign Up' style={{marginTop:20}} onPress={()=>navigation.navigate('HomeStack',{screen:'Home'})}/>
   </View>
   </ScrollView>
 

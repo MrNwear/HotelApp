@@ -1,13 +1,14 @@
 import * as React from 'react';
-import {  View, StyleSheet, KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
-import {  Text } from 'react-native-paper';
+import {  View, KeyboardAvoidingView, Platform, ScrollView,Text } from 'react-native';
 import { Button, Input } from '../../../Components';
 import styles from './style';
+import { useNavigation } from '@react-navigation/native';
 
 interface SignInScreenProps {}
 
 const SignInScreen = (props: SignInScreenProps) => {
     const [passwordShown, setPasswordShown]=React.useState(false);
+    const navigation:any=useNavigation();
     const onShowPasswordPress=()=>{
         setPasswordShown(!passwordShown);
     }
@@ -35,7 +36,7 @@ const SignInScreen = (props: SignInScreenProps) => {
     <Text style={{alignSelf:'flex-end',marginVertical:30}}>
         Forget Password ?
     </Text>
-    <Button title='Sign In' />
+    <Button title='Sign In' onPress={()=>navigation.navigate('HomeStack',{screen:'Home'})} />
   </View>
   </ScrollView>
 

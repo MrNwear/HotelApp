@@ -65,7 +65,7 @@ const TextInputComponent = (props: TextInput) => {
           icon ? (
             <TextInput.Icon
               icon={icon}
-              color={Colors.black}
+              color={Colors.gray}
               onPress={onPressIcon}
             />
           ) : (

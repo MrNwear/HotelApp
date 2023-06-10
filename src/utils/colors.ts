@@ -7,7 +7,8 @@ export const Colors: colorType = {
     description:'#6d6e6d',
     white: '#fff',
     black: '#000000',
-    error:'#801313'
+    error:'#801313',
+    gray:'#A9A9A9'
    
 };
 type colorType = {
@@ -19,5 +20,6 @@ type colorType = {
     description:string;
     activeInput:string;
     inactiveInput:string;
-    error:string
+    error:string;
+    gray:string
 };

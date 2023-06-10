@@ -16,7 +16,7 @@ const SignUpScreen = (props: SignUpScreenProps) => {
       style={{flex: 1}}>
         <ScrollView>
 
-    <View style={{ flex: 1,marginHorizontal:25,marginVertical:40 }}>
+    <View style={styles.container}>
     <Text style={styles.label}>Username</Text>
 
     <Input placeholder='Enter Username' style={styles.textInput} />
